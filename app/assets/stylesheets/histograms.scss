@@ -1,0 +1,64 @@
+p
+{
+  color : red;
+  background-color:rgb(220, 235, 242);
+  font-size:150%;
+}
+
+ul#grade
+{
+  list-style-type:none;
+  display: inline-block;
+  line-height: 23px;
+}
+
+ul#mark
+{
+  list-style-type:none;
+  float : right;
+  position: relative;
+  left: -20%;
+  line-height : 20px;
+}
+
+ul#histgrade
+{
+  list-style-type:none;
+  display: inline-block;
+  float: left;
+}
+
+ul#histcount
+{
+  list-style-type:none;
+  float : left;
+  position: relative;
+  right: -10%;
+  line-height : 1.45;
+}
+
+h4
+{
+    color: red;
+}
+
+div.grades
+{
+	float:left;
+	background-color:rgb(220, 235, 242);
+	width:30%;
+	margin: 10px;
+}
+
+div.histogram
+{
+  float:left;
+  background-color:rgb(220, 235, 242);
+  width:30%;
+  margin: 10px;
+}
+
+button
+{
+  float : left;
+}
