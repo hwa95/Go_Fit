@@ -1,11 +1,67 @@
-# Go_Fit Project Proposal
+# ruby-getting-started
 
-GoFit, is a user driven health application that will support anyone interested in living a healthy lifestyle through careful management of their diet and fitting plans. GoFit can suggest ideal diet plans among user submitted plans to fit each user’s personal need. Our system allows users to input/update nutritional value of foods to extend our nutritional database which simplify diet plans. On the other hand, GoFit can also act like a schedule manager. It will help users to find the balance between their workout and daily life. The map function in this application can help users to find the nearest gym/store. Users can submit their own diet plan/guide/recipe and any other users can follow along with community/forum to discuss and socialize.
+A barebones Rails app, which can easily be deployed to Heroku.
 
-GoFit has five main features. Firstly, with the nutrition management in GoFit, users can calculate the amount of nutrients for certain diet combination. Secondly, every user has a profile where the user can enter their data such as age, height, and weight. With these data, GoFit can calculates the Nutrient RDA (Recommended Daily Allowance) for users. 
+This application support the [Getting Started with Ruby on Heroku](https://devcenter.heroku.com/articles/getting-started-with-ruby) article - check it out.
 
-Users are also encouraged to update their weight regularly because they can use GoFit to generate a line graph which shows the weight change over a certain period. Just like a social media platform, users can choose to keep their information private or public and share their diet/exercise plans or achievements with other users. Users can also submit their own guide/recipe/diet plan for others to follow. 
+## Running Locally
 
-In addition, GoFit provides busy users who still care about their health a scheduling system. To start off, users are asked to set up their plans on a timetable or put checkmarks on the time intervals of a week which they are unavailable. With their preferred exercise times and lengths entered, the system will then suggest an optimal exercise schedules for the users. Furthermore, Google Maps is also implanted in GoFit allowing users to conveniently access a map to find fitness centres, supplement store, and supermarkets nearby.
+Make sure you have Ruby installed.  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
 
-An admin would have the right to audit and edit any inappropriate or incorrect public data. If time allows, there will be a button to report any public data to admin. 
+```sh
+$ git clone git@github.com:heroku/ruby-getting-started.git
+$ cd ruby-getting-started
+$ bundle install
+$ bundle exec rake db:create db:migrate
+$ heroku local
+```
+
+Your app should now be running on [localhost:5000](http://localhost:5000/).
+
+## Deploying to Heroku
+
+```sh
+$ heroku create
+$ git push heroku master
+$ heroku run rake db:migrate
+$ heroku open
+```
+
+or
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+## Docker
+
+The app can be run and tested using the [Heroku Docker CLI plugin](https://devcenter.heroku.com/articles/local-development-with-docker-compose).
+
+Make sure the plugin is installed:
+
+    heroku plugins:install heroku-docker
+
+Configure Docker and Docker Compose:
+
+    heroku docker:init
+
+And run the app locally:
+
+    docker-compose up web
+
+The app will now be available on the Docker daemon IP on port 8080.
+
+To work with the local database and do migrations, you can open a shell:
+
+    docker-compose run shell
+    bundle exec rake db:migrate
+
+You can also use Docker to release to Heroku:
+
+    heroku create
+    heroku docker:release
+    heroku open
+
+## Documentation
+
+For more information about using Ruby on Heroku, see these Dev Center articles:
+
+- [Ruby on Heroku](https://devcenter.heroku.com/categories/ruby)
