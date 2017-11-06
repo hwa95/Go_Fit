@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+
 ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -42,4 +43,4 @@ gem 'puma'
 gem 'byebug', group: [:development, :test]
 
 # For custom stylesheet
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '3.3.6'
