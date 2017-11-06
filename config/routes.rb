@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'personal_pages/member_page'
+
   resources :users
   root :to => "sessions#login_attempt"
   match "signup", :via => [:get], :to => "users#new"
