@@ -17,6 +17,8 @@ module SessionsHelper
 
   # Logs out the current user
   def log_out
+    # session[:user_id] = nil
+    # redirect_to root_path, :notice => "Logged out!"
     session.delete(:user_id)
     @current_user = nil
   end
