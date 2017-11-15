@@ -8,11 +8,15 @@ class User < ActiveRecord::Base
   validates :email, presence:true, length: { maximum:255 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
-                    
+
   def initialize(attributes = {}) #Call when we execute User.new
     super
     @name  = attributes[:name]
     @email = attributes[:email]
+    @height = attributes[:height]
+    @weight = attributes[:weight]
+    @date_of_birth = attributes[:date_of_birth]
+    @description = attributes[:description]
   end
 
   def formatted_email

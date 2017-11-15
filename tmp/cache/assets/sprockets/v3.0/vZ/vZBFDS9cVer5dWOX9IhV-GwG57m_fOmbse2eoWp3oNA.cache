@@ -1,0 +1,10 @@
+I"”(function() {
+  jQuery(function() {
+    $('#user_date_of_birth').datepicker;
+    return {
+      dateFormat: 'yy-mm-dd'
+    };
+  });
+
+}).call(this);
+:ET
