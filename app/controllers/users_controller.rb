@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
 
   def index
-      @users = User.paginate(page: params[:page])
+      @users = User.all
+      # @users = User.paginate(page: params[:page])
   end
 
 
@@ -78,11 +79,4 @@ class UsersController < ApplicationController
         redirect_to(root_url) unless current_user.admin?
       end
 
-      def manager_user
-
-      end
-
-      def instructor_user
-        
-      end
 end

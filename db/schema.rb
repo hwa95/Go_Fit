@@ -22,10 +22,7 @@ ActiveRecord::Schema.define(version: 20171115014533) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
-    t.string   "type"
     t.boolean  "admin",           default: false
-    t.boolean  "manager",         default: false
-    t.boolean  "instructor",      default: false
     t.integer  "height"
     t.integer  "weight"
     t.date     "date_of_birth"
