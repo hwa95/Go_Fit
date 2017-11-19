@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :cources
+
   root 'sessions#new'
 
   get     '/help',    to: 'static_pages#help'
